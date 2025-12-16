@@ -1,25 +1,39 @@
-// Alternância claro/escuro + salvamento
-const toggle = document.getElementById('theme-toggle');
+// TEMA
+const toggle = document.querySelector('.theme-toggle-btn');
 const html = document.documentElement;
-const saved = localStorage.getItem('theme') || 'light';
+const saved = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', saved);
+toggle.textContent = saved === 'dark' ? '🌙' : '☀️';
 
 toggle.addEventListener('click', () => {
   const current = html.getAttribute('data-theme');
-  const next = current === 'light' ? 'dark' : 'light';
+  const next = current === 'dark' ? 'light' : 'dark';
   html.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
+  toggle.textContent = next === 'dark' ? '🌙' : '☀️';
 });
 
-// Animação ao rolar
-AOS.init({ offset: 80, duration: 600 });
-
-// Form → WhatsApp
-document.getElementById('form-orcamento').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const nome = this.nome.value.trim();
-  const tel = this.telefone.value.trim();
-  const msg = this.mensagem.value.trim() || 'Quero um orçamento';
-  const text = `Olá, sou ${nome}. Telefone: ${tel}. ${msg}`;
-  window.open(`https://wa.me/5533999571994?text=${encodeURIComponent(text)}`, '_blank');
+// NAVBAR SCROLL
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 100) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
 });
+
+// SCROLL SUAVE
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ANIMAÇÃO AO ROLAR
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
