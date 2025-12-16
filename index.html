@@ -1,94 +1,152 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MetalFort - Funilaria especializada em calhas pré-pintadas, portas de enrolar e acabamentos em galvalume. Entrega rápida em Montes Claros e região.">
-  <meta name="keywords" content="calhas, portas de enrolar, galvalume, funilaria, Montes Claros, chapa pré-pintada">
-  <title>MetalFort | Funilaria - Calhas & Portas de Enrolar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="MetalFort - Especialista em calhas pré-pintadas, portas de enrolar e acabamentos em galvalume. Atendimento em Araçuaí-MG e região.">
+  <meta name="keywords" content="calhas, portas de enrolar, galvalume, funilaria, Araçuaí, Montes Claros, chapa pré-pintada">
+  <meta name="author" content="MetalFort">
+  <title>MetalFort | Calhas e Portas de Enrolar - Araçuaí MG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <button id="theme-toggle" aria-label="Alternar tema">🌓</button>
 
-  <header id="hero">
-    <nav>
-      <img src="assets/img/logo.png" alt="MetalFort" class="logo">
-      <div class="nav-links">
-        <a href="#servicos">Serviços</a>
-        <a href="#cores">Cores</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </nav>
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span>⚒️</span>
+        <span>MetalFort</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><button class="theme-toggle-btn" onclick="toggleTheme()">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
     <div class="hero-content">
-      <h1>Funilaria de Calhas e Portas de Enrolar</h1>
-      <p>Chapas pré-pintadas, galvalume e acabamentos impecáveis — entrega rápida em Montes Claros e região.</p>
-      <a href="#contato" class="btn">Solicitar Orçamento</a>
-    </div>
-  </header>
+      <h1>Calhas e Portas de Enrolar de Alta Performance</h1>
+      <h2>Chapas pré-pintadas, galvalume e acabamentos impecáveis</h2>
+      <p class="hero-description">
+        Especialista em funilaria: calhas em cores exclusivas, portas de enrolar galvanizadas e 
+        acabamentos premium. Entrega rápida em Araçuaí e toda a região.
+      </p>
 
-  <section id="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="cards">
-      <div class="card" data-aos="fade-up">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number">+500</span>
+          <span class="stat-label">Projetos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">14+</span>
+          <span class="stat-label">Anos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Personalizado</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Atendimento</span>
+        </div>
+      </div>
+
+      <div class="avatar-section">
+        <img src="https://ui-avatars.com/api/?name=Uadson&size=200&background=ff6b35&color=fff&bold=true" alt="Uadson" class="avatar">
+        <div class="avatar-info">
+          <h3>Uadson - Proprietário</h3>
+          <p>Especialista em funilaria e acabamentos metálicos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="servicos">
+    <h2 class="section-title fade-in">Serviços em Destaque</h2>
+    <div class="projects-grid">
+      <div class="project-card fade-in">
+        <span class="project-icon">🌧️</span>
         <h3>Calhas Pré-Pintadas</h3>
-        <p>Branco, preto, amadeirado, cerâmica e galvalume. Alta durabilidade e acabamento de fábrica.</p>
+        <p>Chapas pré-pintadas de alta qualidade. Disponível em branco, preto, amadeirado, cerâmica e galvalume.</p>
+        <ul class="features">
+          <li>Cores exclusivas e duráveis</li>
+          <li>Acabamento impecável</li>
+          <li>Entrega rápida na região</li>
+        </ul>
       </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="project-card fade-in">
+        <span class="project-icon">🚪</span>
         <h3>Portas de Enrolar</h3>
-        <p>Lâminas galvanizadas com pintura eletrostática na cor desejada. Segurança e design moderno.</p>
+        <p>Lâminas galvanizadas com pintura eletrostática nas cores desejadas. Segurança e estilo.</p>
+        <ul class="features">
+          <li>Galvanizadas com pintura eletrostática</li>
+          <li>Cores personalizadas</li>
+          <li>Sistema de segurança incluso</li>
+        </ul>
       </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Embaixados & Acabamentos</h3>
-        <p>Inovação em detalhes: embaixados, rufos, sarjetas e mais. Precisão milimétrica.</p>
+
+      <div class="project-card fade-in">
+        <span class="project-icon">🎨</span>
+        <h3>Acabamentos Inovadores</h3>
+        <p>Embaixados, rufos, sarjetas e mais. Técnicas modernas de funilaria com resultados superiores.</p>
+        <ul class="features">
+          <li>Embaixados e rufos precisos</li>
+          <li>Técnicas de funilaria avançadas</li>
+          <li>Padrão de excelência garantido</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="cores">
-    <h2>Cores Disponíveis</h2>
-    <div class="cor-grid">
-      <div class="cor-item" style="--cor: #fff; --txt: #000">Branco</div>
-      <div class="cor-item" style="--cor: #000; --txt: #fff">Preto</div>
-      <div class="cor-item" style="--cor: #8B4513; --txt: #fff">Amadeirado</div>
-      <div class="cor-item" style="--cor: #d4a373; --txt: #000">Cerâmica</div>
-      <div class="cor-item" style="--cor: #c0c0c0; --txt: #000">Galvalume</div>
+  <section class="cta-section">
+    <div class="cta-content fade-in">
+      <h2>Melhor prazo e atendimento da região</h2>
+      <p>Especialistas em funilaria, calhas e portas de enrolar. Materiais premium e acabamentos inovadores.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/5533999571994" class="btn btn-primary" target="_blank">💬 Falar no WhatsApp</a>
+        <a href="#servicos" class="btn btn-secondary">📋 Ver todos serviços</a>
+      </div>
     </div>
   </section>
 
-  <section id="galeria">
-    <h2>Galeria de Obras</h2>
-    <div class="gallery">
-      <figure><img src="assets/img/calha-branca.jpg" alt="Calha branca instalada"></figure>
-      <figure><img src="assets/img/porta-enrolar.jpg" alt="Porta de enrolar galvanizada"></figure>
-      <figure><img src="assets/img/galvalume.jpg" alt="Detalhe em galvalume"></figure>
-      <figure><img src="assets/img/calha-preta.jpg" alt="Calha preta em sobrado"></figure>
-      <figure><img src="assets/img/amadeirado.jpg" alt="Acabamento amadeirado"></figure>
-      <figure><img src="assets/img/ceramica.jpg" alt="Calha cor cerâmica"></figure>
+  <section class="contact" id="contato">
+    <h2 class="section-title fade-in">Entre em Contato</h2>
+    <div class="contact-grid">
+      <div class="contact-card fade-in">
+        <span class="contact-icon">👤</span>
+        <h3>Proprietário</h3>
+        <p>Uadson<br>MetalFort</p>
+      </div>
+      <div class="contact-card fade-in">
+        <span class="contact-icon">📱</span>
+        <h3>WhatsApp</h3>
+        <p>(33) 99957-1994<br>Atendimento rápido</p>
+      </div>
+      <div class="contact-card fade-in">
+        <span class="contact-icon">📍</span>
+        <h3>Localização</h3>
+        <p>Araçuaí - MG<br>Atendemos toda região</p>
+      </div>
     </div>
-  </section>
-
-  <section id="contato">
-    <h2>Solicite seu Orçamento</h2>
-    <form id="form-orcamento">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="tel" name="telefone" placeholder="Seu telefone" required>
-      <textarea name="mensagem" placeholder="Detalhes do projeto (opcional)"></textarea>
-      <button type="submit">Enviar via WhatsApp</button>
-    </form>
   </section>
 
   <footer>
-    <img src="assets/img/logo.png" alt="MetalFort" class="logo-footer">
-    <p>MetalFort - © 2025 - Todos os direitos reservados</p>
-    <p><a href="tel:33999571994">(33) 99957-1994</a></p>
+    <div class="footer-content">
+      <h3>MetalFort Serviços</h3>
+      <p>Especialista em soluções metálicas premium. Projetos personalizados com qualidade e durabilidade.</p>
+      <div class="footer-location">📍 Araçuaí - MG | (33) 99957-1994</div>
+      <p style="margin-top: 2rem; opacity: 0.7;">© 2025 MetalFort. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <a href="https://wa.me/5533999571994" class="whatsapp-float" target="_blank">📱</a>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
